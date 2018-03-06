@@ -3,28 +3,36 @@ Caramelo App
 
 BACKEND
 -------------
+
 Nodejs v9.0.0
 
 
 
 FRONTEND
 -------------
-Ionic
-----
+
+Ionic setup
+-----------
 npm install -g cordova ionic
 ionic start myApp tabs
-$ ionic start myApp blank
-$ ionic start myApp sidemenu
+ionic start myApp blank
+ionic start myApp sidemenu
 
 Run your App
-                
+--------------          
 cd myApp
 ionic serve
 
+Devapp
+---------------
+ionic serve -c
+
 Build (prepare + compile) an Ionic project for a given platform
+---------------
 
 Synopsis
-$ ionic cordova build platform
+---------
+ionic cordova build platform
   
 Details
 Like running cordova build directly, but also builds web assets and provides friendly checks.
@@ -46,11 +54,11 @@ Option	Description
 --emulator	Create a Cordova build for an emulator
 --buildConfig	Use the specified Cordova build configuration
 Examples
-$ ionic cordova build ios
-$ ionic cordova build ios --prod --release
-$ ionic cordova build ios --device --prod --release -- --developmentTeam="ABCD" --codeSignIdentity="iPhone Developer" --packageType="app-store"
-$ ionic cordova build android
-$ ionic cordova build android --prod --release -- -- --keystore=filename.keystore --alias=myalias
-$ ionic cordova build android --prod --release -- -- --minSdkVersion=21
-$ ionic cordova build android --prod --release -- -- --versionCode=55
-$ ionic cordova build android --prod --release -- -- --gradleArg=-PcdvBuildMultipleApks=true
+ ionic cordova build ios
+ ionic cordova build ios --prod --release
+ ionic cordova build ios --device --prod --release -- --developmentTeam="ABCD" --codeSignIdentity="iPhone Developer" --packageType="app-store"
+ ionic cordova build android
+ ionic cordova build android --prod --release -- -- --keystore=filename.keystore --alias=myalias
+ ionic cordova build android --prod --release -- -- --minSdkVersion=21
+ ionic cordova build android --prod --release -- -- --versionCode=55
+ ionic cordova build android --prod --release -- -- --gradleArg=-PcdvBuildMultipleApks=true
